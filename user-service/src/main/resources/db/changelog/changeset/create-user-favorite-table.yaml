@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-favorite
+      author: Ilya Ignatovich
+      changes:
+        - createTable:
+            tableName: favorite
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: varchar(255)
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: user_favorite_fk
+                    referencedTableName: user
+                    referencedColumnNames: id

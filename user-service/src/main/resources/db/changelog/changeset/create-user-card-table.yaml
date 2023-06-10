@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-card
+      author: Ilya Ignatovich
+      changes:
+        - createTable:
+            tableName: card
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: number
+                  type: varchar(255)
+              - column:
+                  name: owner
+                  type: varchar(255)
+              - column:
+                  name: status
+                  type: bit(1)
+              - column:
+                  name: validity_date
+                  type: varchar(255)
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: user_card_fk
+                    referencedTableName: user
+                    referencedColumnNames: id

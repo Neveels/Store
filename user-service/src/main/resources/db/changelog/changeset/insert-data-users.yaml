@@ -1,0 +1,53 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-users-data
+      author: Ilya Ignatovich
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: first_name
+                  value: Ilya
+              - column:
+                  name: last_name
+                  value: Ignatovich
+              - column:
+                  name: avatar
+                  value: default_path.jpg
+              - column:
+                  name: email
+                  value: neevels@mail.ru
+              - column:
+                  name: password
+                  value: $2a$10$RtLkwIFEQEf6gjDpDBBl/epxm1ctCQl96o2vQuHQFuG6z3jIah8Rq
+              - column:
+                  name: phone_number
+                  value: +375297694430
+              - column:
+                  name: role
+                  value: ADMIN
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: first_name
+                  value: Karolina
+              - column:
+                  name: last_name
+                  value: Ignatovich
+              - column:
+                  name: avatar
+                  value: default_path.jpg
+              - column:
+                  name: email
+                  value: karolina@mail.ru
+              - column:
+                  name: password
+                  value: $2a$10$t4qIer3U7lcBO0Fke3Z.WueWVNGz3cvTlF.s8FFNhM9WHXve7HE4y
+              - column:
+                  name: phone_number
+                  value: +375297694430
+              - column:
+                  name: role
+                  value: MANAGER

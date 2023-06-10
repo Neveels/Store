@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+#  gateway:
+#    container_name: api-gateway
+#    build: gateway
+#    ports:
+#      - 9090:9090
+#    restart: always
+  app:
+    build: user-service
+    container_name: 'java-app'
+    ports:
+      - 8081:8081
+    environment:
+      - 'SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/marketplace'
+      - 'SPRING_DATASOURCE_USERNAME=postgres'
+      - 'SPRING_DATASOURCE_PASSWORD=212109'
+    depends_on:
+      - postgres
+    restart: always
+#  product:
+#    build: product-service
+#    container_name: 'product-service'
+#    ports:
+#      - 8082:8082
+#    depends_on:
+#      - mongodb
+
+  mongodb:
+    image: 'mongo'
+    ports:
+      - 27017:27017
+
+  postgres:
+    image: 'postgres:10'
+    container_name: 'java_postgres'
+    environment:
+      - 'POSTGRES_PASSWORD=212109'
+      - 'POSTGRES_DB=marketplace'
+    restart: always
+    volumes:
+      - java_postgres:/var/lib/postgresql/data
+
+volumes:
+  java_postgres:

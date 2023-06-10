@@ -1,1 +1,19 @@
-
+server:
+  port: 9090
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE

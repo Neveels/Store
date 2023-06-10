@@ -1,0 +1,503 @@
+{
+	"info": {
+		"_postman_id": "b014b212-faa9-492b-8d5d-196578b6af21",
+		"name": "MARKETPLACE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20352011"
+	},
+	"item": [
+		{
+			"name": "USER REQUESTS",
+			"item": [
+				{
+					"name": "GET ALL USERS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWV2ZWxzQG1haWwucnUiLCJpYXQiOjE2Nzg4NjY5NzIsImV4cCI6MTY3ODg2ODQxMn0.zSGT_tVS2yK9E0_KgDOsH3gY6DnJWU5jbTmoAHAvt_4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/user/getAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXZlbHNAbWFpbC5ydSIsImlhdCI6MTY3ODg2Njk0MSwiZXhwIjoxNjc4ODY4MzgxfQ.4rCc4pVNvPgFprOeHXpXAQnypJ9jE3ItAzhIkozNXQE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/user/getUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWV2ZWxzQG1haWwucnUiLCJpYXQiOjE2Nzg4NjY5NzIsImV4cCI6MTY3ODg2ODQxMn0.zSGT_tVS2yK9E0_KgDOsH3gY6DnJWU5jbTmoAHAvt_4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"123121\",\r\n    \"lastName\": \"212321\",\r\n    \"phoneNumber\": \"12312312312\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUCT REQUESTS",
+			"item": [
+				{
+					"name": "ADD PRODUCT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWV2ZWxzQG1haWwucnUiLCJpYXQiOjE2NzgyMjI2NDQsImV4cCI6MTY3ODIyNDA4NH0.cWKt0RlPsjxbkjkriOhh7vZDp9ndWkYM-Ok_688bUig",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/product/addProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PRODUCT BY ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWV2ZWxzQG1haWwucnUiLCJpYXQiOjE2NzgxODM4MDgsImV4cCI6MTY3ODE4NTI0OH0.6Kn9zNcrCEm2SvOzKwcAPZaoZMr6gIu7CnB-9mR6AZs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/product/getProduct/805",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"product",
+								"getProduct",
+								"805"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SIGN IN | SIGN UP",
+			"item": [
+				{
+					"name": "SIGN UP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Dima\",\r\n    \"lastName\": \"Ignatovich\",\r\n    \"email\": \"dima@mail.ru\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SIGN IN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"neevels@mail.ru\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/auth/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"auth",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADDRESS REQUESTS",
+			"item": [
+				{
+					"name": "ADD ADDRESS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWV2ZWxzQG1haWwucnUiLCJpYXQiOjE2Nzg4NjY5NzIsImV4cCI6MTY3ODg2ODQxMn0.zSGT_tVS2yK9E0_KgDOsH3gY6DnJWU5jbTmoAHAvt_4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"country\": \"Belarus\",\r\n    \"state\": \"Minsk\",\r\n    \"city\": \"Minsk\",\r\n    \"street\": \"Kolasa\",\r\n    \"house\": \"28\",\r\n    \"apartment\": \"515\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/address/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"address",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL ADDRESSES OF USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWV2ZWxzQG1haWwucnUiLCJpYXQiOjE2Nzg4NjY5NzIsImV4cCI6MTY3ODg2ODQxMn0.zSGT_tVS2yK9E0_KgDOsH3gY6DnJWU5jbTmoAHAvt_4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/address/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"address",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ADDRESS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWVldmVsc0BtYWlsLnJ1IiwiaWF0IjoxNjc4NzgxODg2LCJleHAiOjE2Nzg3ODMzMjZ9.zi-9-RyuSOti2g2EvrFK9DrTiY5P34la0V4MC23latw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"country\": \"Belarus\",\r\n    \"state\": \"Minsk\",\r\n    \"city\": \"Minsk\",\r\n    \"street\": \"Kolasa\",\r\n    \"house\": \"28\",\r\n    \"apartment\": \"515\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+							"port": "8081",
+							"path": [
+								"address",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ADDRESS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWV2ZWxzQG1haWwucnUiLCJpYXQiOjE2Nzg3ODM2MzAsImV4cCI6MTY3ODc4NTA3MH0.4BVD79Qfp3ifEWC
+							"port": "8081",
+							"path": [
+								"address",
+								"delete",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CARD REQUESTS",
+			"item": [
+				{
+					"name": "ADD CARD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWV2ZWxzQG1haWwucnUiLCJpYXQiOjE2NzgyMjI2NDQsImV4cCI6MTY3ODIyNDA4NH0.cWKt0RlPsjxbkjkriOhh7vZDp9ndWkYM-Ok_688bUig",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"country\": \"Belarus\",\r\n    \"state\": \"Minsk\",\r\n    \"city\": \"Minsk\",\r\n    \"street\": \"Kolasa\",\r\n    \"house\": \"28\",\r\n    \"apartment\": \"515\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/address/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"address",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL CARDS OF USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWV2ZWxzQG1haWwucnUiLCJpYXQiOjE2NzgyMjM5MTksImV4cCI6MTY3ODIyNTM1OX0.7edacjIsE8pIfClEMQk8UFOzrVWod3xhwVaWpPEwaNQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/address/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"address",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CARD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZWVldmVsc0BtYWlsLnJ1IiwiaWF0IjoxNjc4NzgxODg2LCJleHAiOjE2Nzg3ODMzMjZ9.zi-9-RyuSOti2g2EvrFK9DrTiY5P34la0V4MC23latw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"country\": \"Belarus\",\r\n    \"state\": \"Minsk\",\r\n    \"city\": \"Minsk\",\r\n    \"street\": \"Kolasa\",\r\n    \"house\": \"28\",\r\n    \"apartment\": \"515\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/address/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"address",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CARD",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/card/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"card",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
